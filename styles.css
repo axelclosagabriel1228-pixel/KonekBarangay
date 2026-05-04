@@ -1,109 +1,122 @@
-/* Import modern fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@400;700&display=swap');
-
-/* ===== THEME VARIABLES ===== */
-:root{
-    --gov-blue: #0038A8;
-    --gov-red: #CE1126;
-    --gov-yellow: #FCD116;
-    --bg: #f4f6fb;
-    --surface: #ffffff;
-    --muted: #556272;
-    --shadow: rgba(3,7,18,0.06);
-    --radius: 12px;
-    --container: 1100px;
+/* ===== BASIC RESET ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #eef2f7;
+    color: #333;
 }
 
-/* ===== RESET & BASE ===== */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    margin:0;
-    background: linear-gradient(180deg, var(--bg), #fbfdff);
-    color:#0f172a;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    line-height:1.6;
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(to right, #0038A8, #CE1126); /* BLUE TO RED */
+    color: white;
+    padding: 15px;
+    text-align: center;
 }
 
-.container{max-width:var(--container);margin:0 auto;padding:0 20px}
-
-a{color:var(--gov-blue);text-decoration:none;transition:color .18s ease,transform .12s ease}
-a:focus{outline:3px solid rgba(0,56,168,0.12);outline-offset:3px;border-radius:6px}
-
-/* ===== HEADER / NAV ===== */
-header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    padding:14px 20px;
-    background:linear-gradient(90deg,var(--gov-blue),#002f86);
-    color:#fff;
-    position:sticky;top:0;z-index:110;
-    box-shadow:0 6px 20px rgba(2,6,23,0.08);
+/* ===== NAVBAR ===== */
+nav {
+    margin-top: 10px;
 }
 
-header h1{margin:0;font-family:'Merriweather', serif;font-weight:700;font-size:1.25rem;color:#fff}
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
 
-nav{display:flex;gap:8px;align-items:center}
-nav a{color:#fff;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.04);font-weight:600;transition:background .18s,transform .12s}
-nav a:hover,nav a:focus{background:rgba(255,255,255,0.12);transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,0.12);text-decoration:none}
+nav a:hover {
+    background: #FCD116; /* YELLOW */
+    color: black;
+}
 
-/* ===== MAIN LAYOUT ===== */
-main{padding:56px 0}
-main .container{padding:0 20px}
-main h2{font-family:'Merriweather', serif;color:var(--gov-blue);font-size:2rem;margin:0 0 8px}
-main p.lead{color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:0.6px;margin:0 0 18px}
+/* ===== MAIN ===== */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
 
-/* ===== GRID / CARDS ===== */
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:16px}
-.card{background:var(--surface);padding:20px;border-radius:var(--radius);box-shadow:0 6px 24px var(--shadow);border-left:6px solid var(--gov-blue);transition:transform .22s cubic-bezier(.22,.9,.12,1),box-shadow .22s;display:flex;flex-direction:column;gap:12px}
-.card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(3,7,18,0.08)}
-.card h3{margin:0;font-size:1.125rem;color:#072142;font-weight:700}
-.card p{margin:0;color:var(--muted);flex-grow:1}
+/* ===== CARDS GRID ===== */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
 
-/* Button utilities */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:10px;font-weight:700;cursor:pointer;border:none}
-.btn-primary{background:linear-gradient(180deg,var(--gov-blue),#002f86);color:#fff;box-shadow:0 8px 20px rgba(3,36,67,0.12);transition:transform .18s,box-shadow .18s}
-.btn-primary:hover,.btn-primary:focus{transform:translateY(-3px);box-shadow:0 20px 40px rgba(3,36,67,0.18)}
+/* ===== CARD DESIGN ===== */
+.card {
+    background: white;
+    border-left: 6px solid #0038A8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
 
-/* Support HTML that uses <a><button>Go</button></a> */
-a > button{all:unset;display:inline-flex;align-items:center;justify-content:center;padding:8px 14px;border-radius:10px;background:linear-gradient(180deg,var(--gov-blue),#002f86);color:#fff;font-weight:700;cursor:pointer}
-a > button:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(3,36,67,0.14)}
+.card:hover {
+    transform: translateY(-5px);
+}
 
-/* ===== FORMS & INPUTS ===== */
-input,textarea,select{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #e2e8f0;background:#fff;transition:border-color .14s,box-shadow .14s}
-input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gov-blue);box-shadow:0 8px 20px rgba(3,56,168,0.06)}
+/* ===== BUTTON ===== */
+button {
+    background: #CE1126;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
 
-/* ===== ANNOUNCEMENTS & ALERTS ===== */
-.announcement-card{background:var(--surface);border-left:6px solid var(--gov-yellow);padding:16px;border-radius:10px;box-shadow:0 6px 20px var(--shadow);transition:transform .18s}
-.announcement-card:hover{transform:translateX(8px)}
+button:hover {
+    background: #a80e20;
+}
 
-.alert-card{background:var(--surface);border-left:8px solid var(--gov-red);padding:16px;border-radius:10px;box-shadow:0 6px 20px var(--shadow);transition:transform .18s}
-.alert-card:hover{transform:scale(1.02)}
+/* ===== INPUT ===== */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
 
 /* ===== FOOTER ===== */
-footer{background:linear-gradient(180deg,#021a4b,#002a77);color:#fff;padding:28px 20px;margin-top:36px}
-footer p{margin:0;text-align:center}
-
-/* ===== LINKS / MICROINTERACTIONS ===== */
-.link-animated{position:relative}
-.link-animated::after{content:'';position:absolute;left:0;bottom:-3px;height:3px;width:100%;background:linear-gradient(90deg,var(--gov-yellow),var(--gov-blue));transform:scaleX(0);transform-origin:left;transition:transform .22s}
-.link-animated:hover::after{transform:scaleX(1)}
-
-/* ===== ACCESSIBILITY HELPERS ===== */
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width:720px){
-    header{flex-direction:column;align-items:flex-start;padding:12px}
-    nav{flex-wrap:wrap}
-    main h2{font-size:1.6rem}
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #0038A8;
+    color: white;
 }
 
-/* small visual polish */
-button:focus, a:focus{outline-offset:3px}
+/* ===== ANNOUNCEMENT MODULE ===== */
 
-/* End of styles */
+.announcement-card {
+    background: white;
+    border-left: 6px solid #FCD116; /* YELLOW */
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.announcement-card:hover {
+    transform: translateX(8px);
+}
+
+/* ===== ALERT MODULE ===== */
+
+.alert-card {
+    background: white;
+    border-left: 8px solid #CE1126; /* RED */
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.alert-card:hover {
+    transform: scale(1.02);
+}
