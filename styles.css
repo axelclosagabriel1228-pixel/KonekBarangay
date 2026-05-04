@@ -1,0 +1,122 @@
+/* ===== BASIC RESET ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #eef2f7;
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(to right, #0038A8, #CE1126); /* BLUE TO RED */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #FCD116; /* YELLOW */
+    color: black;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* ===== CARDS GRID ===== */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+/* ===== CARD DESIGN ===== */
+.card {
+    background: white;
+    border-left: 6px solid #0038A8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== BUTTON ===== */
+button {
+    background: #CE1126;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #a80e20;
+}
+
+/* ===== INPUT ===== */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #0038A8;
+    color: white;
+}
+
+/* ===== ANNOUNCEMENT MODULE ===== */
+
+.announcement-card {
+    background: white;
+    border-left: 6px solid #FCD116; /* YELLOW */
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.announcement-card:hover {
+    transform: translateX(8px);
+}
+
+/* ===== ALERT MODULE ===== */
+
+.alert-card {
+    background: white;
+    border-left: 8px solid #CE1126; /* RED */
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.alert-card:hover {
+    transform: scale(1.02);
+}
