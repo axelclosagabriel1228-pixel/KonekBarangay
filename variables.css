@@ -1,0 +1,75 @@
+/* ============================================================
+   variables.css — Design Tokens & CSS Custom Properties
+   Barangay Portal | Royal Blue · Red · White · Yellow Theme
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+:root {
+  /* ── Brand Colors ── */
+  --royal-blue:       #1A3A8F;
+  --royal-blue-mid:   #2550C0;
+  --royal-blue-light: #E8EEFF;
+  --royal-blue-dark:  #0F2460;
+  --royal-blue-dim:   rgba(26,58,143,.08);
+
+  --red:              #C0202C;
+  --red-mid:          #E0303E;
+  --red-light:        #FDECEA;
+  --red-dark:         #8C1520;
+
+  --yellow:           #F5C518;
+  --yellow-mid:       #F7D04A;
+  --yellow-light:     #FFFBEA;
+  --yellow-dark:      #B8920A;
+
+  --white:            #FFFFFF;
+  --off-white:        #F7F8FC;
+  --surface:          #FFFFFF;
+  --surface2:         #F2F4FA;
+
+  /* ── Text ── */
+  --text:             #111827;
+  --text-mid:         #374151;
+  --text-muted:       #6B7280;
+  --text-light:       #9CA3AF;
+
+  /* ── Borders ── */
+  --border:           rgba(26,58,143,.12);
+  --border-strong:    rgba(26,58,143,.22);
+
+  /* ── Semantic ── */
+  --success:          #167C50;
+  --success-light:    #E5F5EE;
+  --warning:          #B8920A;
+  --warning-light:    var(--yellow-light);
+  --danger:           var(--red);
+  --danger-light:     var(--red-light);
+  --info:             var(--royal-blue);
+  --info-light:       var(--royal-blue-light);
+
+  /* ── Typography ── */
+  --fd: 'Outfit', sans-serif;
+  --fb: 'Plus Jakarta Sans', sans-serif;
+
+  /* ── Layout ── */
+  --sidebar:  248px;
+  --hdr:       64px;
+  --ticker:    34px;
+
+  /* ── Radius ── */
+  --r-xs:  4px;
+  --r-sm:  6px;
+  --r-md:  10px;
+  --r-lg:  16px;
+  --r-xl:  22px;
+
+  /* ── Shadow ── */
+  --shadow-sm:  0 1px 3px rgba(26,58,143,.08), 0 2px 6px rgba(26,58,143,.05);
+  --shadow-md:  0 4px 12px rgba(26,58,143,.10), 0 1px 3px rgba(26,58,143,.06);
+  --shadow-lg:  0 10px 32px rgba(26,58,143,.14), 0 2px 6px rgba(26,58,143,.06);
+
+  /* ── Transition ── */
+  --t-fast:  .12s ease;
+  --t-base:  .2s ease;
+}

@@ -1,0 +1,43 @@
+/* ============================================================
+   inquiries.css — FAQ Accordion & Inquiry Form Styles
+   ============================================================ */
+
+/* ── FAQ ── */
+.faq-item {
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-md);
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: border-color var(--t-fast);
+}
+.faq-item:hover { border-color: var(--royal-blue); }
+.faq-item.open  { border-color: var(--royal-blue); box-shadow: var(--shadow-sm); }
+
+.faq-q {
+  padding: 14px 18px;
+  font-size: 13.5px; font-weight: 600; color: var(--text);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--surface); border: none;
+  width: 100%; text-align: left;
+  font-family: var(--fb);
+  transition: background var(--t-fast);
+}
+.faq-q:hover   { background: var(--royal-blue-light); color: var(--royal-blue); }
+.faq-item.open .faq-q { background: var(--royal-blue); color: var(--white); }
+
+.faq-arrow {
+  transition: transform var(--t-base);
+  font-size: 11px; color: var(--text-muted);
+  flex-shrink: 0; margin-left: 12px;
+}
+.faq-item.open .faq-arrow { transform: rotate(180deg); filter: brightness(10); }
+
+.faq-a {
+  display: none;
+  padding: 14px 18px 18px;
+  font-size: 13px; color: var(--text-mid); line-height: 1.7;
+  background: var(--off-white);
+  border-top: 1px solid var(--border);
+}
+.faq-item.open .faq-a { display: block; }

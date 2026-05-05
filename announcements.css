@@ -1,0 +1,43 @@
+/* ============================================================
+   announcements.css — Announcement Cards & Styles
+   ============================================================ */
+
+.ann-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--royal-blue);
+  border-radius: var(--r-lg);
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--t-fast), box-shadow var(--t-fast);
+}
+.ann-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.ann-card[data-cat="health"]  { border-left-color: var(--red); }
+.ann-card[data-cat="event"]   { border-left-color: var(--royal-blue); }
+.ann-card[data-cat="infra"]   { border-left-color: var(--yellow-dark); }
+.ann-card[data-cat="gov"]     { border-left-color: var(--royal-blue-mid); }
+
+.ann-hdr {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 12px; margin-bottom: 8px;
+}
+.ann-title {
+  font-family: var(--fd); font-size: 15.5px; font-weight: 700;
+  color: var(--royal-blue-dark); margin: 6px 0; line-height: 1.35;
+}
+.ann-body {
+  font-size: 13px; color: var(--text-mid); line-height: 1.7;
+}
+.ann-foot {
+  display: flex; align-items: center; gap: 8px;
+  margin-top: 12px; padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+.ann-date {
+  font-size: 11px; color: var(--text-muted);
+  white-space: nowrap; flex-shrink: 0;
+}

@@ -1,0 +1,56 @@
+/* ============================================================
+   lostfound.css — Lost & Found Grid Cards
+   ============================================================ */
+
+.lf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 14px;
+  margin-bottom: 26px;
+}
+.lf-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--t-fast), box-shadow var(--t-fast);
+  cursor: pointer;
+}
+.lf-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.lf-img {
+  height: 110px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 46px;
+}
+.lf-img-lost  { background: var(--yellow-light); }
+.lf-img-found { background: var(--royal-blue-light); }
+
+.lf-body { padding: 12px 14px; }
+.lf-type {
+  font-size: 10px; font-weight: 800;
+  letter-spacing: .08em; text-transform: uppercase; margin-bottom: 5px;
+}
+.lf-lost  { color: var(--yellow-dark); }
+.lf-found { color: var(--royal-blue); }
+
+.lf-name   { font-family: var(--fd); font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.lf-detail { font-size: 11.5px; color: var(--text-muted); margin-bottom: 2px; line-height: 1.5; }
+
+/* ── Tag on top right of card ── */
+.lf-card[data-lft="lost"]  .lf-img::before {
+  content: 'LOST';
+  position: absolute; top: 8px; right: 8px;
+  background: var(--yellow); color: var(--royal-blue-dark);
+  font-size: 9px; font-weight: 800; padding: 2px 8px;
+  border-radius: 99px; letter-spacing: .05em;
+}
+.lf-card { position: relative; }
+
+@media (max-width: 480px) {
+  .lf-grid { grid-template-columns: 1fr 1fr; }
+}
