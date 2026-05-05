@@ -11,73 +11,126 @@
 <body>
 
     <!-- HEADER NG SYSTEM -->
-    <header>
-        <h1>Konek Barangay</h1>
-
-        <!-- NAVIGATION LINKS -->
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="lostfound.html">Lost & Found</a>
-            <a href="requests.html">Requests</a>
-            <a href="announcements.html">Announcements</a>
-            <a href="alerts.html">Alerts</a>
-            <a href="inquiries.html">Inquiries</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="gov-header">
+        <div class="container header-inner">
+            <img src="assets/logo.svg" alt="Konek Barangay Seal" class="logo">
+            <div class="title">
+                <h1 data-i18n data-en="Konek Barangay" data-fil="Konek Barangay">Konek Barangay</h1>
+                <p class="tagline" data-i18n data-en="A system for easier barangay services" data-fil="Isang sistema para sa mas madaling serbisyo ng barangay">Isang sistema para sa mas madaling serbisyo ng barangay</p>
+            </div>
+            <div class="contact">
+                <div class="header-controls">
+                    <select id="lang-select" class="lang-select" aria-label="Select language">
+                        <option value="en">English</option>
+                        <option value="fil">Filipino</option>
+                    </select>
+                    <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">EN</button>
+                    <a href="login.html" class="login-link" data-i18n data-en="Sign in" data-fil="Mag-log in">Sign in</a>
+                    <a href="/accounts/logout/" class="login-link" style="margin-left:6px;background:transparent;border:1px solid rgba(255,255,255,0.12)" data-i18n data-en="Log out" data-fil="Mag-log out">Log out</a>
+                </div>
+                <a href="tel:+0000000000" class="office" data-i18n data-en="Office: (000) 000-0000" data-fil="Tanggapan: (000) 000-0000">Office: (000) 000-0000</a>
+            </div>
+        </div>
+        <nav role="navigation" aria-label="Main navigation" class="main-nav">
+            <div class="container nav-links">
+                <a href="index.html" data-i18n data-en="Home" data-fil="Bahay">Home</a>
+                <a href="lostfound.html" data-i18n data-en="Lost &amp; Found" data-fil="Nawawala at Natagpuan">Lost &amp; Found</a>
+                <a href="requests.html" data-i18n data-en="Requests" data-fil="Mga Kahilingan">Requests</a>
+                <a href="announcements.html" data-i18n data-en="Announcements" data-fil="Mga Anunsiyo">Announcements</a>
+                <a href="alerts.html" data-i18n data-en="Alerts" data-fil="Mga Babala">Alerts</a>
+                <a href="dms.html" data-i18n data-en="Documents" data-fil="Mga Dokumento">Documents</a>
+                <a href="inquiries.html" data-i18n data-en="Inquiries" data-fil="Mga Tanong">Inquiries</a>
+            </div>
         </nav>
     </header>
 
     <!-- homepage -->
-    <main>
+    <main id="main" class="container">
 
     <!-- homepage description -->
-    <h2>WELCOME TO KONEK BARANGAY</h2>
-    <p>ISANG SYSTEM PARA SA MAS MADALING SERBISYO NG BARANGAY</p>
+    <h2 data-i18n data-en="WELCOME TO KONEK BARANGAY" data-fil="MALIGAYANG PAGDATING SA KONEK BARANGAY">WELCOME TO KONEK BARANGAY</h2>
+    <p data-i18n data-en="A system for easier barangay services" data-fil="Isang sistema para sa mas madaling serbisyo ng barangay">ISANG SYSTEM PARA SA MAS MADALING SERBISYO NG BARANGAY</p>
 
     <!-- services -->
     <div class="services">
 
         <!-- CARD 1 -->
         <div class="card">
-            <h3>Lost & Found</h3>
-            <p>Mag report ng nawawala o nakitang gamit.</p>
-            <a href="lostfound.html"><button>Go</button></a>
+            <h3 data-i18n data-en="Lost &amp; Found" data-fil="Nawawala at Natagpuan">Lost &amp; Found</h3>
+            <p data-i18n data-en="Report lost or found items." data-fil="Mag-report ng nawawala o nakitang gamit.">Mag report ng nawawala o nakitang gamit.</p>
+            <a href="lostfound.html"><button data-i18n data-en="Go" data-fil="Buksan">Go</button></a>
         </div>
 
         <!-- CARD 2 -->
         <div class="card">
-            <h3>Requests</h3>
-            <p>Mag request ng equipment o serbisyo.</p>
-            <a href="requests.html"><button>Go</button></a>
+            <h3 data-i18n data-en="Requests" data-fil="Mga Kahilingan">Requests</h3>
+            <p data-i18n data-en="Request services or items from your barangay." data-fil="Mag-request ng equipment o serbisyo.">Mag request ng equipment o serbisyo.</p>
+            <a href="requests.html"><button data-i18n data-en="Go" data-fil="Buksan">Go</button></a>
         </div>
 
         <!-- CARD 3 -->
         <div class="card">
-            <h3>Announcements</h3>
-            <p>Latest updates mula sa barangay.</p>
-            <a href="announcements.html"><button>Go</button></a>
+            <h3 data-i18n data-en="Announcements" data-fil="Mga Anunsiyo">Announcements</h3>
+            <p data-i18n data-en="Latest updates from the barangay." data-fil="Latest updates mula sa barangay.">Latest updates mula sa barangay.</p>
+            <a href="announcements.html"><button data-i18n data-en="Go" data-fil="Buksan">Go</button></a>
         </div>
 
         <!-- CARD 4 -->
         <div class="card">
-            <h3>Alerts</h3>
-            <p>Emergency at important alerts.</p>
-            <a href="alerts.html"><button>Go</button></a>
+            <h3 data-i18n data-en="Alerts" data-fil="Mga Babala">Alerts</h3>
+            <p data-i18n data-en="Emergency and important alerts." data-fil="Emergency at important alerts.">Emergency at important alerts.</p>
+            <a href="alerts.html"><button data-i18n data-en="Go" data-fil="Buksan">Go</button></a>
         </div>
 
         <!-- CARD 5 -->
         <div class="card">
-            <h3>Inquiries</h3>
-            <p>Magtanong tungkol sa barangay services.</p>
-            <a href="inquiries.html"><button>Go</button></a>
+            <h3 data-i18n data-en="Inquiries" data-fil="Mga Tanong">Inquiries</h3>
+            <p data-i18n data-en="Ask about barangay services." data-fil="Magtanong tungkol sa barangay services.">Magtanong tungkol sa barangay services.</p>
+            <a href="inquiries.html"><button data-i18n data-en="Go" data-fil="Buksan">Go</button></a>
         </div>
 
     </div>
 
-</main>
+    <!-- Announcement preview widget -->
+    <aside class="announcement-widget" aria-labelledby="ann-widget-title">
+        <h3 id="ann-widget-title" data-i18n data-en="Latest Announcements" data-fil="Pinakabagong Anunsiyo">Latest Announcements</h3>
+        <ul class="items">
+            <li class="item">
+                <div class="meta">APR 28, 2026 • <span data-i18n data-en="Community Clean-up" data-fil="Community Clean-up">Community Clean-up</span></div>
+                <div class="text"><a href="announcements.html">Join the barangay clean-up drive this Saturday. Click to read details.</a></div>
+            </li>
+            <li class="item">
+                <div class="meta">APR 25, 2026 • <span data-i18n data-en="Water Interruption" data-fil="Pansamantalang Pagkawala ng Tubig">Water Interruption</span></div>
+                <div class="text"><a href="announcements.html">Temporary water interruption expected 8AM–2PM. Prepare accordingly.</a></div>
+            </li>
+            <li class="item">
+                <div class="meta">APR 22, 2026 • <span data-i18n data-en="Youth Sports Festival" data-fil="Palarong Pambata">Youth Sports Festival</span></div>
+                <div class="text"><a href="announcements.html">Registration now open for the youth sports festival. Sign up at the barangay hall.</a></div>
+            </li>
+        </ul>
+        <a class="view-all" href="announcements.html" data-i18n data-en="View all announcements" data-fil="Tingnan lahat ng anunsiyo">View all announcements</a>
+    </aside>
+
+    </main>
 
     <!-- footer -->
-    <footer>
-        <p>© 2026 Konek Barangay</p>
-    </footer>x  
+    <footer role="contentinfo">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <p data-i18n data-en="© 2026 Konek Barangay" data-fil="© 2026 Konek Barangay">© 2026 Konek Barangay</p>
+            </div>
+            <div class="footer-center">
+                <p>Barangay Hall • Tramo, Batangas City</p>
+            </div>
+            <div class="footer-right">
+                <a href="privacy.html" data-i18n data-en="Privacy" data-fil="Pribasiya">Privacy</a>
+                <a href="terms.html" data-i18n data-en="Terms" data-fil="Tuntunin">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
 
 </body>
 </html>

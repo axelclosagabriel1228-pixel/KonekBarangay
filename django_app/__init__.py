@@ -1,0 +1,1 @@
+# Konek Barangay Django Application
